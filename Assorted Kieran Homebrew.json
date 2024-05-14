@@ -1,0 +1,651 @@
+{
+	"_meta": {
+		"sources": [
+			{
+				"json": "KPFHB",
+				"abbreviation": "KPath",
+				"full": "Assorted Kieran Homebrew",
+				"authors": [
+					"Kieran"
+				],
+				"color": "813a8b",
+				"version": "0.1"
+			}
+		],
+		"dateAdded": 1715606894,
+		"dateLastModified": 1715606894
+	},
+	"feat": [
+		{
+			"name": "Blood Rush",
+			"source": "KPFHB",
+			"level": 8,
+			"traits": [
+				"Barbarian"
+			],
+			"prerequisites": "{@classFeature juggernaut|barbarian||7}",
+			"entries": [
+				"You relish in the absolute thrill of being in combat, and use the attacks your opponents make against you to dole out your own punishment. At the start of each of your turns when you regain your actions, if an enemy or an effect created by an enemy dealt damage to you since your last turn, you gain an additional reaction you can use for any barbarian reaction, excluding {@feat Attack of Opportunity (Barbarian)||Reactive Strike}."
+			]
+		},
+		{
+			"name": "Bulldozing Charge",
+			"source": "KPFHB",
+			"level": 2,
+			"activity": {
+				"number": 2,
+				"unit": "action"
+			},
+			"traits": [
+				"Barbarian",
+				"Flourish"
+			],
+			"prerequisites": "trained in {@skill Athletics}",
+			"entries": [
+				"You slam your body into an enemy, driving them back with your sheer weight. Attempt an Athletics check to {@action Shove} an enemy in your reach even if you do not have a free hand, pushing it half your speed on a success (5 + half your speed on a critical success). You must follow after it, as you charge into it, using your own body to drive it back."
+			]
+		},
+		{
+			"name": "Groundbreaker",
+			"source": "KPFHB",
+			"level": 10,
+			"activity": {
+				"number": 1,
+				"unit": "varies",
+				"entry": "{@as 2} OR {@as 3}"
+			},
+			"traits": [
+				"Barbarian"
+			],
+			"prerequisites": "{@classFeature juggernaut|barbarian||7}",
+			"entries": [
+				"You {@action Leap} (or {@action Long Jump} if you spent three actions} forward, crashing into your destination. Where you land, the ground in a 5-foot emanation becomes {@quickref difficult terrain||3|terrain}. Creatures in the area must make a Reflex saving throw against your class DC, becoming {@condition Clumsy||clumsy 1} on a failure."
+			]
+		},
+		{
+			"name": "Heave",
+			"source": "KPFHB",
+			"level": 8,
+			"traits": [
+				"Barbarian"
+			],
+			"prerequisites": "{@feat Oversized Throw|APG}",
+			"entries": [
+				"You put MORE power into your boulder-lobbing, FUCK that guy in particular. If you make an Oversized Throw with 2 hands, the damage increases by 1d10, and if the projectile hits a creature within its first range increment, you can attempt an Athletics check with a -2 circumstance penalty to {@action Shove} the target at range."
+			]
+		},
+		{
+			"name": "Ruinous",
+			"source": "KPFHB",
+			"level": 10,
+			"traits": [
+				"Barbarian"
+			],
+			"entries": [
+				"You can always push yourself further for pure destructive value, giving up your striking accuracy. Whenever you make an attack roll and have a {@trait fortune} effect that allows you to roll it twice, you can forgo it to instead reroll your damage roll and take the higher of the two rolls. This is still a fortune effect.",
+				"If you gain a fortune effect that allows you to reroll the die after you make the attack roll, you can also similarly forgo it to reroll your damage roll instead."
+			]
+		},
+		{
+			"name": "Sphere of Influence",
+			"source": "KPFHB",
+			"level": 12,
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"traits": [
+				"Barbarian"
+			],
+			"requirements": "You are able to make a melee attack and you aren't {@condition prone}",
+			"entries": [
+				"You lash out indiscriminately, making the area surrounding you dangerous to traverse. All squares within your reach become {@quickref difficult terrain||3|terrain} to all creatures, and {@quickref hazardous terrain||3|terrain} for your enemies until you move from the square you are in, dismiss the effect as a free action, or cease meeting the requirements.", 
+				"An enemy takes 2 damage of a type a melee weapon you are wielding or unarmed attack you have can deal each time it moves into one of these squares. If your attack can deal multiple types of damage simultaneously, choose up to two of those damage types and distribute the damage evenly."
+			]
+		},
+		{
+			"name": "Vengeful Rage",
+			"source": "KPFHB",
+			"level": 4,
+			"activity": {
+				"number": 1,
+				"unit": "reaction"
+			},
+			"traits": [
+				"Barbarian",
+				"Flourish"
+			],
+			"trigger": "An enemy you can see deals damage to an ally, and you are capable of {@action Rage||Raging}",
+			"entries": [
+				"Seeing your ally in harm's way ignites a burst of adrenaline within you. {@action Rage}, then {@action Stride} towards the triggering enemy. You can use Vengeful Rage to {@action Burrow}, {@action Climb}, {@action Fly}, or {@action Swim} instead of Stride if you have the corresponding movement type."
+			]
+		},
+		{
+			"name": "Discombobulate",
+			"source": "KPFHB",
+			"level": 6,
+			"activity": {
+				"number": 2,
+				"unit": "action"
+			},
+			"traits": [
+				"Investigator",
+				"Mental"
+			],
+			"entries": [
+				"This musn't register on an emotional level. Make a melee {@action Strike}. If the attack hits and deals bludgeoning damage, the target must make a Fortitude save against your class DC. On a critical hit, treat the save result as one degree worse. Regardless of the result, the target is then immune to being Discombobulated for 10 minutes.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Success": "The target suffers no ill effects.",
+						"Failure": "The target is your choice of {@condition dazzled} or {@condition Stupefied||stupefied 2} for 1 round.",
+						"Critical Failure": "As failure, but the target is also {@condition confused} for the duration."
+					}
+				}
+			]
+		},
+		{
+			"name": "Guild Investigator",
+			"source": "KPFHB",
+			"level": 1,
+			"traits": [
+				"Investigator"
+			],
+			"entries": [
+				"The best way to get the leeways you seek for your work is by acquiring yourself some \"friends\" in high places. You're particularly adept at getting information and obtaining favours from aristocrats, even in settlements you've never been to before.",
+				"You become trained in {@skill Lore||High Society Lore}, a Lore skill you can use to {@action Recall Knowledge} on nobility, guilds, and other such prominent figures in upper society. You gain your {@action Pursue a Lead|APG} circumstance bonus to checks you make to investigate or pursue the subject of your lead if you interact with members of high society to do so.",
+				"If you have the {@feat Courtly Graces} feat and are expert in {@skill Society}, you automatically gain the {@feat Connections} feat."
+			],
+			"leadsTo": [
+				"Word of Mouth|KPFHB"
+			]
+		},
+		{
+			"name": "Let's Just Kill Them",
+			"source": "KPFHB",
+			"level": 1,
+			"activity": {
+				"number": 1,
+				"unit": "reaction"
+			},
+			"traits": [
+				"Investigator"
+			],
+			"trigger": "You are about to roll initiative against a creature after you or your allies failed to {@action Coerce} or otherwise negotiate with them.",
+			"entries": [
+				"Even the greatest of negotiators tire of talking things out with boneheads sometimes - you always anticipate the day you're allowed to just whale on them.",
+				"You roll initiative using {@skill Deception}, {@skill Diplomacy}, or {@skill Intimidation} (whichever is most appropriate to the situation). You gain a +1 status bonus to the initiative roll, and all checks you make with the skill you used to roll initiative until the end of your turn."
+			]
+		},
+		{
+			"name": "Plot",
+			"source": "KPFHB",
+			"level": 1,
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites": "{@classFeature Devise a Stratagem|Investigator|APG|1}",
+			"requirements": "You are {@condition flat-footed||off-guard} to at least one enemy",
+			"entries": [
+				"You understand how a given creature would attempt to take advantage of your vulnerabilities, and you use that to your own benefit. Make a check using a skill appropriate to {@action Recall Knowledge} against the Perception DC of an enemy you are {@condition flat-footed||off-guard} to (For example, {@skill Society} for humanoids, or {@skill Religion} for spirits). If the skill you used to Plot was a {@skill Lore} skill, you gain a +2 circumstance bonus to the roll.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, but you also have a +1 circumstance bonus to your AC against the creature.",
+						"Success": "The creature is off-guard to you for as long as you are off-guard to it. ",
+						"Critical Failure": "You lose the thread. The creature becomes immune to further uses of your Plot for a day."
+					}
+				}
+			]
+		},
+		{
+			"name": "Red Alert",
+			"source": "KPFHB",
+			"level": 1,
+			"traits": [
+				"Investigator",
+				"Rogue"
+			],
+			"entries": [
+				"You have an uncanny ability to sense when a creature is presenting itself disingenuously, and you're always on guard against such façades. You gain a +1 circumstance bonus to Perception checks to discover that a creature is disguised, shapechanged, or has an alter ego. Even if you aren't Searching, the GM makes a secret Perception check for you each time you encounter such a creature. The Perception check is made against the creature's Deception DC, and only alerts you to the fact they are disguised, and not to what lies under the disguise.",
+				"You also gain a +3 circumstance bonus to initiative if any enemy is rolling Deception for initiative."
+			]
+		},
+		{
+			"name": "Spoil the Plot",
+			"source": "KPFHB",
+			"level": 1,
+			"traits": [
+				"Investigator"
+			],
+			"entries": [
+				"You're incredible at setting the scene, and you've mastered the ability to describe specific courses of actions to your allies. You can use {@skill Society} to {@action Lie} about the specific details or misrepresent a scene or event. Likewise, if you aren't lying, your audience automatically believes you when you talk about such events.",
+				"If you have {@feat Plot|KPFHB}, your aptitude at giving out specific details also allows you to use it to give an {@condition flat-footed||off-guard} ally the benefits of Plot against an enemy that is off-guard to them, instead of on yourself. Both creatures must be within 30 feet of you, and your ally doesn't gain the circumstance bonus to their AC from a critically successful Plot."
+			]
+		},
+		{
+			"name": "Strategic Delay",
+			"source": "KPFHB",
+			"level": 1,
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites": "{@classFeature Devise a Stratagem|Investigator|APG|1}",
+			"requirements": "You have used {@action Devise a Stratagem|APG} this round, but have not yet substituted an attack roll with it",
+			"entries": [
+				"You wait for the best time to make your strike, hoping to spontaneously coordinate an attack with your allies. When you use this action, your turn immediately ends.",
+				"As a reaction any time an ally is about to make a {@action Strike} against the target of your {@action Devise a Stratagem|APG}, you also make a Strike against that creature. If both attacks hit, you combine the damage of both attacks for the purpose of resistances and weaknesses. Unlike normal for attacks outside your turn, you retain your multiple attack penalty from your turn for this attack."
+			]
+		},
+		{
+			"name": "Street Dog",
+			"source": "KPFHB",
+			"level": 1,
+			"traits": [
+				"Investigator"
+			],
+			"entries": [
+				"Your line of work brings you through the streets, behind dirty alleys, into shelters and people's homes. Your specialty is talking to the commonfolk, the people on the ground just like you and me. Eventually, the people get to know and like you, and you usually extend this sentiment.",
+				"You become trained in {@skill Diplomacy} and {@skill Lore||Common People Lore}, a Lore skill you can use to {@action Recall Knowledge} on folk traditions, prominent figures in a society, the best places to buy an apple, and other such information. You can use {@skill Society} instead of {@skill Survival} and gain your {@action Pursue a Lead|APG} circumstance bonus to {@action Track} and otherwise gather information on the subject of your lead if you have help from the commonfolk while you do it. ",
+				"You gain the {@feat Group Impression} feat. When you {@action Make an Impression}, you can treat your degree of success as one higher (to a maximum of a Success) for any commonfolk in the group."
+			],
+			"leadsTo": [
+				"Word of Mouth|KPFHB"
+			]
+		},
+		{
+			"name": "Syndicate Accessory",
+			"source": "KPFHB",
+			"level": 1,
+			"traits": [
+				"Investigator"
+			],
+			"entries": [
+				"Your investigative methodologies and associations strongly align with the world of criminals. You find it easy to assimilate with a new shady organisation, or to even resort to criminal methods yourself.",
+				"You become trained in {@skill Lore||Underworld Lore}, and you gain your {@action Pursue a Lead|APG} circumstance bonus to checks you make to investigate or pursue the subject of your lead if they involve an aspect of crime (such as stealing, breaking and entering, picking locks, and so on).",
+				"If you have the {@feat Streetwise} feat and are expert in {@skill Society}, you automatically gain the {@feat Criminal Connections|APG} feat."
+			],
+			"leadsTo": [
+				"Word of Mouth|KPFHB"
+			]
+		},
+		{
+			"name": "Word of Mouth",
+			"source": "KPFHB",
+			"level": 6,
+			"traits": [
+				"Uncommon",
+				"Investigator"
+			],
+			"prerequisites":"{@feat Guild Investigator|KPFHB}, {@feat Street Dog|KPFHB}, or {@feat Syndicate Accessory|KPFHB}",
+			"entries": [
+				"Your contacts among your workline just {@i love} talking to you about their friends, their family, and their \"family\". You've heard of all sorts of people from all sorts of places, and you can use that to your advantage when in unfamiliar settlements. ",
+				"When you {@action Recall Knowledge} on a populated area you're completely unfamiliar with, you are still able to get information on prominent figures, local events, cultures, and other such knowledge, as you draw upon the repository of small talk other people have made with you. "
+			]
+		},
+		{
+			"name": "Attentive Sleuth",
+			"source": "KPFHB",
+			"level": 8,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Deerstalker|KPFHB}",
+			"entries": [
+				"Your companion is ingrained in your investigative style, allowing it to better support you. Your companion also benefits from the circumstance bonuses to investigate a subject from your {@action Pursue a Lead|APG}. If you have {@feat Detective's Readiness|APG}, your companion also gains its benefits."
+			]
+		},
+		{
+			"name": "Blood Hunter",
+			"source": "KPFHB",
+			"level": 12,
+			"traits": [
+				"Uncommon",
+				"Investigator"
+			],
+			"prerequisites":"{@feat Deerstalker|KPFHB}",
+			"entries": [
+				"Your companion's sense of smell grows strong enough to see trails left by creatures within the last 24 hours. When your companion senses a scent trail, it learns either the creature's travel speed and one of its characteristics (such as its size, creature type, or elemental affinity) or two of its characteristics. If the creature lacks any characteristics like these, the GM decides what traits your companion senses instead. Your companion can't sense traits that have no associated scents, such as the incorporeal or evil traits. You do not gain the ability to see these trails when you {@feat Merge Perceptions|KPFHB}."
+			]
+		},
+		{
+			"name": "Deerstalker",
+			"source": "KPFHB",
+			"level": 2,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@classFeature Devise a Stratagem|Investigator|APG|1}",
+			"entries": [
+				"You gain the services of a {@quickref young animal companion||0|young animal companions} that travels with you and helps you in your investigations. The companion you choose must be Small or Medium, must have the {@ability scent} ability, and you cannot mount it. It is also trained in {@skill Survival} instead of the skill listed for its type. ",
+				"If you have used {@action Devise a Stratagem|APG} this turn and Command your companion to attack the target of it, your companion must also use the result you rolled if it is the first attack either of you have made against the target this turn. You share a preternatural bond with your companion and can communicate with each other from any distance, as long as you can observe each other's body language."
+			],
+			"leadsTo": [
+				"Attentive Sleuth|KPFHB",
+				"Blood Hunter|KPFHB",
+				"Inspectre|KPFHB",
+				"Mature Deerstalker Companion|KPFHB",
+				"Prepared Drink|KPFHB",
+				"Remedial Claws|KPFHB",
+				"Watcher's Boy|KPFHB"
+			]
+		},
+		{
+			"name": "Incredible Deerstalker Companion",
+			"source": "KPFHB",
+			"level": 10,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Mature Deerstalker Companion|KPFHB}",
+			"entries": [
+				"Your animal companion continues to grow and develop. It becomes a {@companionAbility nimble} or {@companionAbility unseen|DA} animal companion (your choice), gaining additional capabilities determined by the type of companion. Increase its proficiency rank in {@skill Survival} to master instead of {@skill Acrobatics} or {@skill Stealth}."
+			],
+			"leadsTo": [
+				"Specialised Deerstalker Companion|KPFHB"
+			]
+		},
+		{
+			"name": "Inspectre",
+			"source": "KPFHB",
+			"level": 6,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Deerstalker|KPFHB}",
+			"entries": [
+				"Your companion's sense of smell grows sharper. It gains the Reveal Location action.",
+				{
+					"type": "ability",
+					"name": "Reveal Location",
+					"activity": {
+						"number": 1,
+						"unit": "action"
+					},
+					"traits": [
+						"concentrate"
+					],
+					"requirements": "The companion can smell an {@condition invisible}, but not {@condition undetected} creature",
+					"entries": [
+						"The companion {@action point out||Points Out} the creature, but only to you. The flat check to target the {@condition hidden} creature is reduced to 5 for you and the companion until the beginning of your next turn."
+					]
+				}
+			]
+		},
+		{
+			"name": "Mature Deerstalker Companion",
+			"source": "KPFHB",
+			"level": 6,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Deerstalker|KPFHB}",
+			"entries": [
+				"Your companion grows up, becoming a {@quickref mature animal companion||0|Mature Animal Companions} and gaining additional capabilities. Your companion cannot grow to a size larger than Medium. During an encounter, if you don't use the {@action Command an Animal} action, your companion can still use 1 action on your turn to {@action Seek}, {@action Point Out}, or use a basic action with the {@trait Move} trait."
+			],
+			"leadsTo": [
+				"Incredible Deerstalker Companion|KPFHB"
+			]
+		},
+		{
+			"name": "Merge Perceptions",
+			"source": "KPFHB",
+			"level": 10,
+			"activity": {
+				"number": 3,
+				"unit": "action"
+			},
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites": "{@feat Prepared Drink|KPFHB}, {@feat Remedial Claws|KPFHB}, or {@feat Watcher's Boy|KPFHB}",
+			"entries": [
+				"You and your companion slip into a deep state of understanding. You both gain all the senses each other has and gain sensory information as if you were in both you and your companion's spaces at once. This effect lasts for an hour and can be {@action dismiss||Dismissed}."
+			]
+		},
+		{
+			"name": "Prepared Drink",
+			"source": "KPFHB",
+			"level": 4,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Deerstalker|KPFHB}, trained in {@skill Crafting}",
+			"entries": [
+				"You can spend 10 minutes rigging up an elixir to your companion. If you are within 30 feet of your companion, you can use a single Interact action to Activate the elixir and have your companion consume it, granting it all the usual benefits. Your companion can have a maximum of one Prepared Drink on it if you have trained proficiency in {@skill Crafting}, two if you have expert proficiency, three if you have master proficiency, and four if you have legendary proficiency.",
+				"If you have the {@class Investigator|APG|alchemical sciences|alchemical sciences} methodology, you can activate a Prepared Drink as a free action on your turn once per round."
+			],
+			"leadsTo": [
+				"Merge Perceptions|KPFHB"
+			]
+		},
+		{
+			"name": "Remedial Claws",
+			"source": "KPFHB",
+			"level": 4,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Deerstalker|KPFHB}, {@feat Battle Medicine}",
+			"entries": [
+				"You are closely familiar with your companion's anatomy, allowing you to mend its wounds more effectively. Once per day, you can use {@feat Battle Medicine} on your companion even when it is immune. Whenever you successfully use Battle Medicine on your companion during an encounter, your companion gains a +1 circumstance bonus to its AC, Fortitude saving throws, and Reflex saving throws for 1 round.",
+				"If you have the {@class Investigator|APG|forensic medicine|forensic medicine} methodology, you can attempt to counteract one affliction your companion is suffering from when you successfully {@action treat wounds||Treat its Wounds}, using your Medicine modifier as your counteract modifier, and your counteract rank is equal to half your level rounded up."
+			],
+			"leadsTo": [
+				"Merge Perceptions|KPFHB"
+			]
+		},
+		{
+			"name": "Specialised Deerstalker Companion",
+			"source": "KPFHB",
+			"level": 16,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Incredible Deerstalker Companion|KPFHB}",
+			"entries": [
+				"Your animal companion continues to grow in power and ability, and it is now cunning enough to become {@quickref specialised||0|Specialized Animal Companions}. Your animal companion gains one specialisation of your choice."
+			],
+			"special": [
+				"You can select this feat up to three times. Each time, add a different specialisation to your companion."
+			]
+		},
+		{
+			"name": "Watcher's Boy",
+			"source": "KPFHB",
+			"level": 8,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Deerstalker|KPFHB}",
+			"entries": [
+				"Your companion is always alert for changes in the scene. It is always considered to be keeping watch, even while asleep, and does not take the usual -4 circumstance penalty to {@skill Perception} checks due to being {@condition unconscious} while asleep. If you are forced to enter an encounter while you are resting, your companion can use a free action on your first turn to use its Support benefit. This does not change the number of actions it gains when you {@action command an animal||Command} it."
+			],
+			"leadsTo": [
+				"Merge Perceptions|KPFHB"
+			]
+		},
+		{
+			"name": "All Eyes On Me",
+			"source": "KPFHB",
+			"level": 12,
+			"traits": [
+				"Detection",
+				"Investigator"
+			],
+			"prerequisites":"{@feat Higher Power|KPFHB}",
+			"entries": [
+				"Otherworldly influences turn you necessarily paranoid, heightening certain senses of yours. Your skin prickles and feels slimy whenever anyone is looking at you - anyone except your higher power.",
+				"You know when someone (or something) that you aren't aware of is watching you, and you can tell the difference between a creature that is watching you in person and one that is watching you remotely, such as via {@trait scrying}. Additionally, you can sense {@trait aberration||aberrations}, {@trait celestial||celestials}, and {@trait monitor||monitors} within 60 feet of you as a vague sense."
+			]
+		},
+		{
+			"name": "Anamnesic Breadth",
+			"source": "KPFHB",
+			"level": 8,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Basic Anamnesic Spellcasting|KPFHB}",
+			"entries": [
+				"Your repertoire expands, and you can cast more spells of your anamnesic tradition each day. Increase the number of spells in your repertoire and number of spell slots you gain from Higher Power archetype feats by 1 for each spell level other than your two highest Higher Power spell slots. The spells you gain from this feat must have the {@trait detection}, {@trait prediction}, {@trait revelation}, or {@trait scrying} traits."
+			]
+		},
+		{
+			"name": "Basic Anamnesic Spellcasting",
+			"source": "KPFHB",
+			"level": 4,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Higher Power|KPFHB}",
+			"entries": [
+				"You gain the {@quickref basic spellcasting benefits|CRB|0|spellcasting archetypes}. Each time you gain a spell slot of a new level from Higher Power feats, add a spell of the appropriate spell level to your repertoire, either a common spell of your anamnesic tradition or another spell of that tradition you have learned or discovered."
+			],
+			"leadsTo": [
+				"Anamnesic Breadth|KPFHB",
+				"Expert Anamnesic Spellcasting|KPFHB"
+			]
+		},
+		{
+			"name": "Expert Anamnesic Spellcasting",
+			"source": "KPFHB",
+			"level": 12,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Basic Anamnesic Spellcasting|KPFHB}; master in your anamnesic skill",
+			"entries": [
+				"You gain the {@quickref expert spellcasting benefits|CRB|0|spellcasting archetypes}."
+			],
+			"leadsTo": [
+				"Master Anamnesic Spellcasting|KPFHB"
+			]
+		},
+		{
+			"name": "Flashes From Beyond",
+			"source": "KPFHB",
+			"level": 6,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Higher Power|KPFHB}, {@class Investigator|APG|empiricism|empiricism} methodology",
+			"entries": [
+				"Even if you didn't notice it, something else did, and that something else is telling you what it saw. Your efforts to calculate changes and subtleties are aided with wildering knowledge. When you {@action Decipher Writing}, {@action Seek} to determine if a location has changed since the last time you saw it, or {@feat Connect The Dots|APG} (if you have it), the check you make is no longer {@trait secret}. If you critically fail the check for the listed activities, you fail instead."
+			]
+		},
+		{
+			"name": "Higher Power",
+			"source": "KPFHB",
+			"level": 2,
+			"traits": [
+				"Rare",
+				"Investigator"
+			],
+			"entries": [
+				"A whisper in your ear, a patron that guides you, or the blessing of a greater deity, you receive the aid of a being of incomprehensible knowledge. You dedicate yourself to receiving its insights and using its powers to uncover truths of your own. When you gain this feat, choose the divine or occult tradition. The tradition you choose and its associated skill (further referred to as your anamnesic tradition and skill) will determine the tradition of the spells you can gain from later Higher Power feats. The trait of the tradition you choose is added to all Higher Power feats, as they are all magical in nature.",
+				"You become trained in your anamnesic skill (or expert if you are already trained in it). You learn to cast spontaneous spells and gain the {@action Cast a Spell} activity. You gain a spell repertoire with one cantrip of your choice from your anamnesic tradition. You choose this cantrip from the common spells on your chosen spell list or from other spells you have access to on the list. You're trained in spell attack modifiers and spell DCs, and your key spellcasting ability for these spells is Intelligence."
+			],
+			"leadsTo": [
+				"All Eyes On Me|KPFHB",
+				"Basic Anamnesic Spellcasting|KPFHB",
+				"Flashes From Beyond|KPFHB",
+				"Otherworldly Blabbering|KPFHB",
+				"Portend|KPFHB",
+				"Quietus Detective|KPFHB",
+				"Willing Conduit|KPFHB"
+			]
+		},
+		{
+			"name": "Master Anamnesic Spellcasting",
+			"source": "KPFHB",
+			"level": 18,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites":"{@feat Expert Anamnesic Spellcasting|KPFHB}; legendary in your anamnesic skill",
+			"entries": [
+				"You gain the {@quickref master spellcasting benefits|CRB|0|spellcasting archetypes}."
+			]
+		},
+		{
+			"name": "Otherworldly Blabbering",
+			"source": "KPFHB",
+			"level": 6,
+			"traits": [
+				"Investigator"
+			],
+			"prerequisites": "{@feat Higher Power|KPFHB}, {@class Investigator|APG|interrogation|interrogation} methodology",
+			"entries": [
+				"When you use {@action Pointed Question|APG}, you can choose to dig at your target's subconscious with some of your great patron's power, forcing them to blurt out information you want. Regardless of the result, the target is immune to this feat for a month. Replace Pointed Question's usual effects with the following.",
+				{
+					"type": "successDegree",
+					"entries": {
+						"Critical Success": "As success, but the target does not remember answering your question when the effect ends on it.",
+						"Success": "The target immediately and unwittingly answers your question truthfully and as accurately as possible.",
+						"Failure": "The target must directly answer your question. It doesn't have to answer truthfully, but you gain a +2 circumstance bonus to your Perception DC if the creature attempts to {@action Lie} to you.",
+						"Critical Failure": "The target is whelmed for a moment and is unable to answer you."
+					}
+				},
+				"On any result but a critical success, the target then immediately realises its mind was overtaken by a greater power, and becomes {@condition unfriendly} towards you."
+			]
+		},
+		{
+			"name": "Portend",
+			"source": "KPFHB",
+			"level": 8,
+			"activity": {
+				"number": 1,
+				"unit": "action"
+			},
+			"traits": [
+				"Fortune",
+				"Investigator"
+			],
+			"prerequisites": "{@feat Higher Power|KPFHB}, {@classFeature Devise a Stratagem|Investigator|APG|1}",
+			"frequency": {
+				"number": 1,
+				"unit": "hour"
+			},
+			"entries": [
+				"Your higher power guides your hand in composing the perfect attack. You {@action Devise a Stratagem|APG}, with the following change: If you {@action Strike} the creature this round, you can roll an anamnesic skill check for the attack roll, instead of using your attack modifier. The Strike deals the additional damage from {@classFeature Strategic Strike|Investigator|APG|1} as usual, and benefits from any other bonuses you may have from Devise a Stratagem.",
+				"If you critically hit the creature, roll 1d4 to determine a random additional effect. On a 1, the creature is {@condition drained||drained 1}. On a 2, the creature is {@condition sickened||sickened 1}. On a 3, the creature is {@condition frightened||frightened 1}. On a 4, the creature is {@condition stupefied||stupefied 2}. These conditions last until the end of the target's next turn."
+			]
+		},
+		{
+			"name": "Quietus Detective",
+			"source": "KPFHB",
+			"level": 8,
+			"traits": [
+				"Uncommon",
+				"Investigator"
+			],
+			"prerequisites": "{@feat Higher Power|KPFHB}",
+			"entries": [
+				"You never stop your interrogations, even when your suspect has crossed the boundary of death. Your great and inquisitive patron teaches you the {@spell Talking Corpse|PC1} spell as an innate spell and the {@ritual Call Spirit|PC1} ritual. You can also cast Talking Corpse using any 4th-rank spell slots you gain from Higher Power feats as if it were in your repertoire as a 4th-rank spell."
+			]
+		},
+		{
+			"name": "Willing Conduit",
+			"source": "KPFHB",
+			"level": 6,
+			"traits": [
+				"Investigator",
+				"Revelation"
+			],
+			"prerequisites": "{@feat Higher Power|KPFHB}",
+			"entries": [
+				"Choose two languages you don't know. You permanently lose the ability to learn those languages by any means. You gain the benefits of {@feat Sign Language} and {@feat Read Lips} for those two languages as your higher power allows you to communicate in abnormal ways. You automatically succeed on the {@skill Society} check to Read Lips for the languages granted by this feat.",
+				"When you sign or read lips for these languages, you do not understand the words themselves (and as a result, cannot repeat or learn the languages), but you do understand the meaning. You may add another language you don't know to this feat if you are or become a master in Society and again if you are or become legendary."
+			]
+		}
+	]
+}
